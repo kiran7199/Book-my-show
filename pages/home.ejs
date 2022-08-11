@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./home.css">
+    <style>
+        #outer {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        img {
+            border-radius: 5px;
+
+        }
+
+        #rec {
+            margin-left: 50px;
+        }
+
+        #navb {
+            padding: 20px;
+            background-color: lightslategrey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #dis {
+            display: flex;
+            align-items: center;
+        }
+
+        #in {
+            width: 350px;
+            padding: 2px;
+        }
+
+        #btn a {
+            padding: 2px;
+
+            text-decoration: none;
+            color: black;
+
+        }
+
+        #btn {
+            background-color: crimson;
+            border-radius: 3px;
+        }
+
+        nav {
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            background-color: cadetblue;
+        }
+
+        #lot a {
+            padding: 8px;
+            text-decoration: none;
+        }
+
+        #mot a {
+            padding: 8px;
+            text-decoration: none;
+        }
+
+        #logo {
+            margin-right: 20px;
+        }
+        #kim{
+            margin-top: 40px;
+           background-color: rgb(46,47,68);
+           padding-bottom: 40px;
+           color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navb">
+        <div id="dis">
+            <img id="logo" height="30px" width="100px" src="https://in.bmscdn.com/webin/common/icons/logo.svg" alt="">
+            <input id="in" type="text" placeholder="Search for Movies, Events, Plays, Sports and Activities">
+        </div>
+        <div>
+            <label for="location">Location</label>
+            <select name="location" id="">
+                <option value="">Banglore</option>
+                <option>Delhi</option>
+                <OPtion>Hyderabad</OPtion>
+                <OPtion>Mumbai</OPtion>
+                <OPtion>Chennai</OPtion>
+                <OPtion>Tirupati</OPtion>
+        </div>
+        </select>
+        <button id="btn"><a href="">sign in</a></button>
+    </nav>
+    <nav>
+        <div id="lot">
+            <a href="">Movies </a>
+            <a href="">Plays </a>
+            <a href="">Streams </a>
+            <a href="">Events </a>
+            <a href="">Sports </a>
+            <a href="">Activities </a>
+            <a href="">Buzz</a>
+        </div>
+        <div id="mot">
+            <a href="">ListYourShow</a>
+            <a href="">Corporates</a>
+            <a href="">Offers</a>
+            <a href="">GiftCards</a>
+        </div>
+    </nav>
+    <h1 id="rec">Recommended Movies</h1>
+    <div id="outer">
+
+        <% movies.map((a)=>{ %>
+            <div id="inner">
+                <img height="300px" width="200px" src=<%=a.poster %> alt="">
+                <h2>
+                    <%= a.title %>
+                </h2>
+                <h4>
+                    <%= a.genere %>
+                </h4>
+            </div>
+            <% })%>
+    </div>
+    <h1 id="rec">The Best of Entertainment</h1>
+    <div id="outer">
+        <% joas.map((p)=>{ %>
+            <img height="250px" width="150px" src=<%=p.pos %> alt="">
+            <% }) %>
+    </div>
+    <div id="kim">
+        <div>
+
+            <img width="100%"
+                src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/premiere-rupay-banner-web-collection-202104230555.png"
+                alt="">
+
+        </div>
+        <h1 id="rec">premiers</h1>
+        <h3 id="rec">Brand new releases every Friday</h3>
+        <div id="outer">
+            <% last.map((k)=>{ %>
+                <img height="350px" width="250px" src=<%=k.post %> alt="">
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>
